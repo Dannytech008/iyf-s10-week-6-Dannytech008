@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 6 Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="weather-app">
+    <header class="app-header">
+      <h1>Weather Dashboard</h1>
+      <p class="subtitle">Week 6: Asynchronous JavaScript</p>
+    </header>
+
+    <form id="search-form" class="search-form">
+      <input id="city-input" type="text" placeholder="Enter city name..." required />
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="loading" class="state hidden">Loading weather data...</div>
+    <div id="error" class="state error hidden" role="alert"></div>
+
+    <section id="weather-display" class="weather-display hidden">
+      <div class="weather-main">
+        <h2 id="city-name"></h2>
+        <img id="weather-icon" src="" alt="Weather icon" />
+        <p id="temperature"></p>
+        <p id="description" class="description"></p>
+      </div>
+
+      <div class="weather-details">
+        <div class="detail-card">
+          <span>Feels Like</span>
+          <span id="feels-like"></span>
+        </div>
+        <div class="detail-card">
+          <span>Humidity</span>
+          <span id="humidity"></span>
+        </div>
+        <div class="detail-card">
+          <span>Wind</span>
+          <span id="wind"></span>
+        </div>
+        <div class="detail-card">
+          <span>Pressure</span>
+          <span id="pressure"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="history-panel">
+      <h3>Recent Searches</h3>
+      <ul id="search-history"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
